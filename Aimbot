@@ -731,7 +731,7 @@ function update()
 	-- fov1.Visible = showfov
 	-- fov2.Visible = showfov
 	label1.Visible = showfov
-	label2.Visible = bot and assist
+	-- label2.Visible = bot and assist
 	if showfov then
 	-- 	fov1.Position = mouse
 	-- 	fov1.Radius = min
@@ -741,10 +741,10 @@ function update()
 
 		label1.Position = Vector2new(size.X / 2, (size.Y / 2) + max + 10)
 	end
-	if bot and assist then
-		label2.Position = Vector2new(size.X / 2, (size.Y / 2) + max + 42)
-		return
-	end
+	-- if bot and assist then
+	-- 	label2.Position = Vector2new(size.X / 2, (size.Y / 2) + max + 42)
+	-- 	return
+	-- end
 
 	updatecrosshair(ss.Crosshair or defaultcrosshair)
 end
