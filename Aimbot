@@ -1,5 +1,3 @@
-
-
 local VERSION = "v1.1.20"
 
 if not getgenv().AimbotSettings then
@@ -715,7 +713,7 @@ function update()
 		end
 	end
 
-	if FovCircle.Enabled then
+	if ss.FovCircle.Enabled then
 		fov.Position = mouse
 		fov.NumSides = FovCircle.NumSides
 		fov.Radius = FovCircle.Radius
