@@ -1,3 +1,5 @@
+
+
 local VERSION = "v1.1.20"
 
 if not getgenv().AimbotSettings then
@@ -63,6 +65,21 @@ if not getgenv().AimbotSettings then
 		WhitelistFriends = true, -- Automatically adds friends to the whitelist
 		Ignore = {} -- Raycast Ignore
 	}
+end
+
+if not AimbotSettings.IgnoredTransparency then
+	local bind = Instance.new("BindableFunction")
+	bind.OnInvoke = function()
+		setclipboard("https://pastebin.com/raw/nwqE7v07")
+	end
+	game:GetService("StarterGui"):SetCore("SendNotification",{
+		Title = "Universal Aimbot",
+		Text = "Please update your script!",
+		Duration = 5,
+		Button1 = "Get Latest Script",
+		Callback = bind
+	})
+	return
 end
 
 local players = game:GetService("Players")
@@ -159,6 +176,7 @@ elseif GameId == gids.bb then
 	end
 elseif GameId == gids.rp then
 	rp = true
+
 end
 
 -- if Aimbot.Wallbang then
