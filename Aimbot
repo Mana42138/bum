@@ -728,16 +728,16 @@ function update()
 
 	local showfov = AimAssist.ShowFov
 	max = (dyn and not ads and max) or (dyn and ads and max / (camera.FieldOfView / 100)) or max
-	fov1.Visible = showfov
-	fov2.Visible = showfov
+	-- fov1.Visible = showfov
+	-- fov2.Visible = showfov
 	label1.Visible = showfov
 	label2.Visible = bot and assist
 	if showfov then
-		fov1.Position = mouse
-		fov1.Radius = min
+	-- 	fov1.Position = mouse
+	-- 	fov1.Radius = min
 
-		fov2.Position = mouse
-		fov2.Radius = max
+	-- 	fov2.Position = mouse
+	-- 	fov2.Radius = max
 
 		label1.Position = Vector2new(size.X / 2, (size.Y / 2) + max + 10)
 	end
